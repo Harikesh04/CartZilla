@@ -4,24 +4,21 @@ import { catchAsynError } from "../middleware/catchAsyncError.js";
 import ApiFeatures from "../utils/apiFeatures.js";
 import cloudinary from "cloudinary";
 
-
-
 //get all the product
 export const getAllproducts = catchAsynError(async (req, res) => {
   const resultPerPage = 8;
   const productsCount = await Product.countDocuments();
   //creating object for the class apifeatures && calling its methods
   const ApiFeature = new ApiFeatures(Product.find(), req.query)
+  // req.query jo bhi ? k baad ho .eg- api/v1/localhost:3000?keyword=mobile...
     .search()
-    .filter()
-  
+    .filter();
+
   let products = await ApiFeature.query;
 
-  let filteredProductsCount =  products.length;
+  let filteredProductsCount = products.length;
 
   ApiFeature.pagination(resultPerPage);
-
-
 
   products = await ApiFeature.query.clone();
   res.status(200).json({
@@ -33,30 +30,27 @@ export const getAllproducts = catchAsynError(async (req, res) => {
   });
 });
 
-
 //get all the product --Admin
-export const getAdminProducts = catchAsynError(async (req, res,next) => {
+export const getAdminProducts = catchAsynError(async (req, res, next) => {
   const products = await Product.find();
   res.status(200).json({
     success: true,
     products,
-    
   });
 });
 
-
 //creating product--Admin
 export const createProduct = catchAsynError(async (req, res, next) => {
+  let images = []; // empty array of images
 
-  let images = [];// empty array of images
-
-  if (typeof req.body.images === "string") {// if single image then push in the array
+  if (typeof req.body.images === "string") {
+    // if single image then push in the array
     images.push(req.body.images);
   } else {
     images = req.body.images; // if multiple images then the array will the array of all the images
   }
 
-  const imagesLinks = [];// IN THIS ARRAY WE WILL KEEP THE LINK OF ALL THE IMAGES
+  const imagesLinks = []; // IN THIS ARRAY WE WILL KEEP THE LINK OF ALL THE IMAGES
 
   for (let i = 0; i < images.length; i++) {
     // HERE WE ARE UPLOADING ALL THE IMAGES IN THE CLOUDINARY
@@ -76,6 +70,7 @@ export const createProduct = catchAsynError(async (req, res, next) => {
 
   const product = await Product.create(req.body);
   res.status(201).json({
+    //201=> created
     success: true,
     product,
   });
@@ -83,16 +78,17 @@ export const createProduct = catchAsynError(async (req, res, next) => {
 
 //update the product--Admin
 export const updateProduct = catchAsynError(async (req, res, next) => {
-  let product = await Product.findById(req.params.id);
+  let product = await Product.findById(req.params.id); //fetching id from url
 
   if (!product) {
     return next(new ErrorHandler("Product not found", 404));
   }
 
   // images start here
-  let images = [];// empty array of images
+  let images = []; // empty array of images
 
-  if (typeof req.body.images === "string") {// if single image then push in the array
+  if (typeof req.body.images === "string") {
+    // if single image then push in the array
     images.push(req.body.images);
   } else {
     images = req.body.images; // if multiple images then the array will the array of all the images
@@ -124,6 +120,7 @@ export const updateProduct = catchAsynError(async (req, res, next) => {
     runValidators: true,
     useFindAndModify: false,
   });
+  // this is the format to  update the product i.e we have to pass all these parameters to perform update operation
 
   res.status(200).json({
     success: true,
@@ -140,9 +137,9 @@ export const deleteProduct = catchAsynError(async (req, res, next) => {
 
   // Deleting Images From Cloudinary-- will prevent our unnessary storage.
   for (let i = 0; i < product.images.length; i++) {
-    await cloudinary.v2.uploader.destroy(product.images[i].public_id);//here we have to pass the public id of the image which we have to delete so we are passing it .
+    await cloudinary.v2.uploader.destroy(product.images[i].public_id); //here we have to pass the public id of the image which we have to delete so we are passing it .
   }
-  //here in this loop we are traversing through the images array in the product and we are destroying the image from the array 
+  //here in this loop we are traversing through the images array in the product and we are destroying the image from the array
 
   await product.remove();
   res.status(200).json({
@@ -180,11 +177,11 @@ export const createProductReview = catchAsynError(async (req, res, next) => {
   };
 
   const product = await Product.findById(productId);
-  
+
   const isReviewed = product.reviews.find(
     (rev) => rev.user.toString() === req.user._id.toString()
   );
-   
+
   if (isReviewed) {
     product.reviews.forEach((rev) => {
       if (rev.user.toString() === req.user._id.toString()) {

@@ -6,6 +6,7 @@ const connectDatabase = () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       
+      
    
     })
     .then((data) => {
