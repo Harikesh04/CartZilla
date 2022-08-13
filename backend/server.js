@@ -12,7 +12,10 @@ process.on("uncaughtException", (err) => {
 });
 
 //config
-dotenv.config({ path: "backend/config/config.env" });// this is to tell config file to server.js
+if (process.env.NODE_ENV!=="PRODUCTION") {// WE WILL NOT NEED THIS IN PRODUCTION BECAUSE WE WILL UPLOAD IT THERE
+  dotenv.config({ path: "backend/config/config.env" });// this is to tell config file to server.js
+}
+
 
 //contecting to db
 connectDatabase();
