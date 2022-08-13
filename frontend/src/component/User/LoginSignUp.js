@@ -130,7 +130,7 @@ const LoginSignUp = () => {
                 <div className="loginPassword">
                   <LockOpenIcon />
                   <input
-                    type="password "
+                    type="password"
                     placeholder="Password"
                     required
                     value={loginPassword}
