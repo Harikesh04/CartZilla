@@ -4,10 +4,7 @@ class ApiFeatures {
   // in query we are getting Product.find() and in queryStr we get things after the ? eg.api/v1/localhost:3000?keyword=mobile&page=2....
   //   rhe hai)
   constructor(query, queryStr) {
-    //**constructor Method - these methods are automatically called when class is called by object
-    // the main use of constructor is to define the properties or assign the value to some objects in the class  
-     
-   // ///
+   
     this.query = query; 
     this.queryStr = queryStr;
   } 

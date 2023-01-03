@@ -20,11 +20,10 @@ import { errorMiddleware } from "./middleware/Error.js";
 
 
 
-app.use(express.json());
+app.use(express.json());//this is use to convert the json data in javascript objects
 
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-
+app.use(bodyParser.urlencoded({ extended: true })); // 
 app.use(fileUpload());
 
 
@@ -36,6 +35,7 @@ if (process.env.NODE_ENV!=="PRODUCTION") {// WE WILL NOT NEED THIS IN PRODUCTION
 
 
 //Importing routes
+//Making different base routes for different task
 app.use("/api/v1", product);
 app.use("/api/v1", user);
 app.use("/api/v1", order);

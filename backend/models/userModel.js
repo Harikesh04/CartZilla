@@ -51,12 +51,13 @@ userSchema.pre("save", async function (next) {
     next();
   }
 
-  this.password = await bcrypt.hash(this.password, 10);
+  this.password = await bcrypt.hash(this.password, 10);//saving password in db
 });
 
 //JWT TOKEN
-
+//creating token so that user will we logged in after register
 userSchema.methods.getJWTToken = function () {
+  // jwt.sign(payload, secretOrPrivateKey, [options, callback])
   return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
     // process.env.JWT_SECRET** THIS IS THE SECRET KEY
     expiresIn: process.env.JWT_EXPIRE,

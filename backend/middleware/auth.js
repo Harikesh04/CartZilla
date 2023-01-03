@@ -8,7 +8,7 @@ export const isAuthenticatedUser = catchAsynError(async (req, res, next) => {
   if (!token) {
     return next(new ErrorHandler("Please login to access the resource", 401));
   }
-
+  // jwt.verify(token, secretOrPublicKey, [options, callback])
   const decodedData = jwt.verify(token, process.env.JWT_SECRET);
   // this jwt.verify will verify the token is valid or not by the help of our secret key
   //the validation method returns a decode object that we stored the token in
