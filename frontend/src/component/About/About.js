@@ -36,12 +36,7 @@ const About = () => {
           </div>
           <div className="aboutSectionContainer2">
             <h2>
-              Hii, I am Harikesh Singh a 3rd year IT undergrad at MITS
-              Gwalior.I am full stack WebDeveloper and Competative
-              Programmer.Fond of making websites and working on various
-              techstack.
-
-              The tech stack that I use for making websites is MERN Stack.
+            Hii, I am Harikesh Singh a 3rd year IT undergrad at MITS Gwalior. I am a full-stack web developer and Competitive Programmer. Fond of making websites and working on various tech stack. 
             </h2>
            
 
