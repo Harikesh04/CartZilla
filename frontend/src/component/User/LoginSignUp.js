@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login,register } from "../../actions/userAction";
 import { useAlert } from "react-alert";
 
-const LoginSignUp = () => {
+  const LoginSignUp = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
   const location =useLocation();
@@ -44,19 +44,11 @@ const LoginSignUp = () => {
     dispatch(login(loginEmail, loginPassword));
   };
 
- 
+  const redirect = location.search ? location.search.split("=")[1] : "account";
 
-  const redirect = location.search ? location.search.split("=")[1] : "/account";
-  useEffect(() => {
-    if (error) {
-      alert.error(error);
-      dispatch(clearErrors());
-    }
+  
 
-    if (isAuthenticated) {
-     navigate(redirect);
-    }
-  }, [dispatch, error, alert,isAuthenticated,redirect,navigate]);
+  
 
   const registerSubmit = (e) => {
     e.preventDefault();
@@ -101,6 +93,20 @@ const LoginSignUp = () => {
       loginTab.current.classList.add("shiftToLeft");
     }
   };
+  useEffect(() => {
+    if (error) {
+      alert.error(error);
+      dispatch(clearErrors());
+    }
+
+    if (isAuthenticated) {
+      navigate(`/${redirect}`);
+      
+      
+     }
+  }, [dispatch, error, alert,isAuthenticated ,navigate, redirect]);
+  console.log(isAuthenticated);
+  
   return (
     <Fragment>
       {loading ? (

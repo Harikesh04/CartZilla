@@ -27,13 +27,14 @@
   DELETE_USER_SUCCESS,
   UPDATE_USER_FAIL,
   DELETE_USER_FAIL,
+  LOGIN_REQUEST,
  
 } from "../constants/userConstants.js";
 import axios from "axios";
 //login the user
 export const login = (email, password) => async (dispatch) => {
   try {
-    dispatch({ type: LOGIN_SUCCESS });
+    dispatch({ type: LOGIN_REQUEST });
     const config = { headers: { "Content-Type": "application/json" } };
 
     const { data } = await axios.post(
