@@ -4,7 +4,7 @@
     flex-direction: row;
     align-items: center;
    
-    padding:0  5vmax;
+    
    
     font-family: "Roboto";
     width: 100vw;
@@ -22,7 +22,7 @@
 }
 
 .hero-left{
-   
+    margin-left: 7vmax;
     
     padding: 2vmax;
  
@@ -30,6 +30,7 @@
 .hero-left>h1{
     max-width: 50vmax;
     color: #ed1e79;
+   
    
     font: 500  "Roboto";
     font-size: 3vmax;
@@ -146,14 +147,16 @@
 
 }
 .home-about-section{
-    display: flex;
+     display: flex;
     flex-direction: row;
-    background-color: #ed1e79;
     align-items: center;
-  width: 100vmax;
-  height: 100vh;
-  
-   justify-content: space-evenly;
+   
+    background-color: #ed1e79;
+   
+  font-family: "Roboto";
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-evenly;
    
 
 }
