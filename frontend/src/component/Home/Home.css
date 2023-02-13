@@ -278,6 +278,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+
    
     
 }
@@ -287,6 +288,7 @@
     width: 35vw;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 3vmax;
     padding: 2vmax;
     border-radius: 2vmax;
@@ -297,6 +299,7 @@
     margin-left: 2vmax;
     color: #ed1e79;
 }
+
 
 
     
@@ -325,5 +328,38 @@
         align-items: center;
         width: 90vw;
     }
+    .innerimage{
+        width: 65vw;
+        align-self: center;
+    }
+    .home-services-contianer{
+      height: max-content;
+        
+    }
+    .service-container{
+        background:#fff100;
+        
+        width: 72vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 3vmax;
+        padding: 2vmax;
+        border-radius: 2vmax;
+        cursor: pointer;
+    }
+    .service-header>h1{
+        margin-top: 5vmax;
+        margin-bottom: 2vmax;
+        font: 500  "Roboto";
+        font-size: 4.5vmax;
+        color: #fff100;
+    }
+    .service-header>p{
    
+        font: 300  "Roboto";
+        font-size: 1.8vmax;
+        width: 70vw;
+        color: #fff100;
+    }
 }
