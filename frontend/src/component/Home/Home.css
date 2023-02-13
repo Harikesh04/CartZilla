@@ -4,13 +4,12 @@
     flex-direction: row;
     align-items: center;
    
-    
+    background-color: #ed1e79;
    
-    font-family: "Roboto";
+  font-family: "Roboto";
     width: 100vw;
     height: 100vh;
     justify-content: space-evenly;
-   
     background-color:  #fff100;
 }
 
@@ -298,6 +297,7 @@
     margin-top: 3vmax;
     margin-left: 2vmax;
     color: #ed1e79;
+
 }
 
 
@@ -323,11 +323,7 @@
         margin: 0 0.5vmax;
         font:300 1vmax "Roboto";
     }
-    .home-hero{
-        flex-direction: column;
-        align-items: center;
-        width: 90vw;
-    }
+    
     .innerimage{
         width: 65vw;
         align-self: center;
@@ -362,4 +358,85 @@
         width: 70vw;
         color: #fff100;
     }
+    .home-about-section{
+        flex-direction: column;
+    }
+    .home-about-section img{
+        width: 90vw;
+    }
+    .home-about-left>h1{
+    max-width: 40vmax;
+   
+     
+        font-size: 4vmax;
+    color: #fff100;
+   
+    
+}
+.home-about-left>p{
+    max-width: 40vmax;
+    margin-top: 2vmax;
+    margin-bottom: 2vmax;
+   font-size: 1.8vmax;
+        width: 70vw;
+    color: #fff100;
+   
+    
+}
+.home-hero{
+        flex-direction: column;
+        justify-content: space-evenly;
+       
+       
+    }
+    .hero-img>img{
+   
+    width: 90vw;
+    
+    
+}
+.hero-left>h1{
+    max-width: 50vmax;
+    color: #ed1e79;
+   
+   
+    font: 500  "Roboto";
+    font-size: 4.5vmax;
+   
+    
+}
+.hero-left>p{
+    
+    font-size: 1.8vmax;
+    font: 500  "Roboto";
+    
+    
+   
+    
+}
+.hero-left>button>a{
+   font-size: 1.8vmax;
+    font: 500  "Roboto";
+}
+.hero-left>button::before{
+  background-color: #ed1e79;
+}
+
+.hero-left>button:hover{
+     color:#ed1e79;
+}
+.hero-left>button>a:hover{
+ color: #fff100;
+   
+}
+.ser-text>h1{
+  font-size: 3.5vmax;
+    font: 500  "Roboto";
+}
+.ser-text>p{
+    font-size: 1.6vmax;
+    font: 300  "Roboto";
+}
+
+
 }

@@ -12,8 +12,7 @@ import { motion } from "framer-motion";
 import about from "../../images/about.png";
 import data from "../../Data/serviceData";
 import ServiceCard from "./ServiceCard";
-import Footer from "../layout/Footer/Footer"
-
+import Footer from "../layout/Footer/Footer";
 
 const Home = () => {
   const alert = useAlert();
@@ -50,7 +49,6 @@ const Home = () => {
       y: 0,
       opacity: 1,
     },
-  
   };
 
   const textOptions = {
@@ -81,29 +79,26 @@ const Home = () => {
       ) : (
         <Fragment>
           <MetaData title="CartZilla" />
-          <div className="hero-container">
-            <div className="home-hero">
-              <div className="hero-left">
-                <motion.h1 {...headingOptions}>
-                  Order Products Faster And Easier
-                </motion.h1>
-                <motion.p {...textOptions}>
-                
-                    Order your favorite product at any time and we will deliver
-                    them right to where you are.
-                 
-                </motion.p>
-                <motion.button data-cursorpointer={true} {...buttonOptions}>
-                  <a href="#container">Get Started</a>
-                </motion.button>
-              </div>
-              <motion.div {...imgOptions}>
-                <div className="hero-img">
-                  <img src={image} alt="" />
-                </div>
-              </motion.div>
+
+          <div className="home-hero">
+            <div className="hero-left">
+              <motion.h1 {...headingOptions}>
+                Order Products Faster And Easier
+              </motion.h1>
+              <motion.p {...textOptions}>
+                Order your favorite product at any time and we will deliver them
+                right to where you are.
+              </motion.p>
+              <motion.button data-cursorpointer={true} {...buttonOptions}>
+                <a href="#container">Get Started</a>
+              </motion.button>
             </div>
+
+            <motion.div {...imgOptions} className="hero-img">
+              <img src={image} alt="" />
+            </motion.div>
           </div>
+
           <div className="home-about-section">
             <motion.div {...imgOptions}>
               <img src={about} alt="" />
@@ -120,19 +115,18 @@ const Home = () => {
             </div>
           </div>
           <section className="product-section">
-
-          <motion.h2 {...headingOptions} className="homeheading">
-            Featured Products
-          </motion.h2>
-          <div className="container" id="container">
-            {products &&
-              products.map((product) => <ProductCard product={product} />)}
-          </div>
+            <motion.h2 {...headingOptions} className="homeheading">
+              Featured Products
+            </motion.h2>
+            <div className="container" id="container">
+              {products &&
+                products.map((product) => <ProductCard product={product} />)}
+            </div>
           </section>
 
           <div className="home-services-contianer">
             <div className="service-header">
-              <motion.h1 {...headingOptions} >Some Services We Offer</motion.h1>
+              <motion.h1 {...headingOptions}>Some Services We Offer</motion.h1>
               <motion.p {...textOptions}>
                 With our app you can view the route of your order, from our
                 local headquarters to the place where you are. Look for the app
@@ -143,15 +137,17 @@ const Home = () => {
             <div className="service-image">
               {data.map((data) => {
                 return (
-                  <ServiceCard bgimage={data.bgImage} image={data.image}
-                  title={data.title}
-                  disc={data.description}
+                  <ServiceCard
+                    bgimage={data.bgImage}
+                    image={data.image}
+                    title={data.title}
+                    disc={data.description}
                   />
                 );
               })}
             </div>
           </div>
-          <Footer/>
+          <Footer />
         </Fragment>
       )}
     </>
