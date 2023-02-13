@@ -1,11 +1,11 @@
 .aboutSection {
-    height: 100vh;
+   height: 120vh;
     width: 100vw;
     max-width: 100%;
     background-color: rgb(28, 26, 23);
     display: grid;
     grid-template-columns: 4fr 4fr;
-    position: fixed;
+   
   }
   
   .aboutSectionGradient {

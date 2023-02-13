@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 import "./Contact.css";
+import Footer from "../layout/Footer/Footer"
 
 const Contact = () => {
   const alert = useAlert();
@@ -12,6 +13,7 @@ const Contact = () => {
     navigate("/")
   }
   return (
+    <>
     <Fragment>
       <div className="contactcontainer">
         <form className="contactUsform" onSubmit={submit}>
@@ -32,7 +34,12 @@ const Contact = () => {
           <button type="submit">Submit</button>
         </form>
       </div>
+      
+      
     </Fragment>
+   
+    </>
+
   );
 };
 

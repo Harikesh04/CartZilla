@@ -4,11 +4,13 @@ import { Button, Typography, Avatar } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import Footer from "../layout/Footer/Footer"
 const About = () => {
   const visitInstagram = () => {
     window.location = "https://instagram.com/harikeshsingh_";
   };
   return (
+    <>
     <div className="aboutSection">
       <div></div>
       <div className="aboutSectionGradient"></div>
@@ -45,6 +47,9 @@ const About = () => {
         </div>
       </div>
     </div>
+      <Footer/>
+   
+    </>
   );
 };
 
