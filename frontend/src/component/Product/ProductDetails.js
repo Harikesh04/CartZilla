@@ -23,6 +23,8 @@ import {
 } from "@material-ui/core";
 import { Rating } from "@material-ui/lab";
 import { NEW_REVIEW_RESET } from "../../constants/productConstants";
+import Footer from "../layout/Footer/Footer";
+
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -205,6 +207,7 @@ const ProductDetails = () => {
           )}
         </Fragment>
       )}
+      <Footer/>
     </Fragment>
   );
 };

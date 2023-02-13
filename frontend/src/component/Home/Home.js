@@ -12,6 +12,8 @@ import { motion } from "framer-motion";
 import about from "../../images/about.png";
 import data from "../../Data/serviceData";
 import ServiceCard from "./ServiceCard";
+import Footer from "../layout/Footer/Footer"
+
 
 const Home = () => {
   const alert = useAlert();
@@ -149,6 +151,7 @@ const Home = () => {
               })}
             </div>
           </div>
+          <Footer/>
         </Fragment>
       )}
     </>

@@ -10,6 +10,8 @@ import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import {useAlert} from "react-alert";  
 import MetaData from "../layout/MetaData";
+import Footer from "../layout/Footer/Footer"
+
 
 const categories = ["Laptop", "Shoes", "Clothes", "Camera", "Mobile", "t.v"];
 
@@ -125,6 +127,7 @@ const Products = () => {
           )}
         </Fragment>
       )}
+      <Footer/>
     </Fragment>
   );
 };

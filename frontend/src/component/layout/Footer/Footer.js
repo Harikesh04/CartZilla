@@ -14,41 +14,11 @@ const Footer = () => {
 
   return (
     <Fragment>
-      {/* <footer id="footer">
-            
-           <div className="leftfooter">
-               <h1>Get to Know Us </h1>
-              
-              <a href="/about">About Us</a>
-              <p>Careers</p>
-              <p>Press Releases</p>
-              <p>CartZilla Cares</p>
-              <p>Gift a smile</p>
-              
-              
-           </div>
-           <div className="midfooter">
-                <a href="/">CartZilla </a>
-               
-                <p>Copyrights 2022 &copy; HarikeshSingh</p>
-           </div>
-           <div className="rightfooter">
-               <h1>Links </h1>
-               <a href="https://www.linkedin.com/in/harikesh-singh-506503202/">LinkedIn</a>
-               <a href="https://www.instagram.com/harikeshsingh_/">Instagram</a>
-               <a href="facebook.com">Facebook</a>
-               <a href="/Contact">ContactUs</a>
-
-           </div>
-
-          
-            
-           
-       </footer>  */}
+      
 
       <section className="footer">
         <div className="footer-section1">
-          <div className="logo-footer">
+          <div className="logo-footer-home">
             <img src={logo} alt="" />
           </div>
           <div className="icons">
@@ -77,16 +47,16 @@ const Footer = () => {
         <div className="footer-section">
           <div className="footer-heading">Make money with us</div>
           <div className="footer-navlinks">
-            <Link to="/about" >
+            <Link to="/" >
               Sell on Cartzilla
             </Link>
-            <Link to="/about" >
+            <Link to="/" >
               Sell under CartZilla Accelerator
             </Link>
-            <Link to="/about" >
+            <Link to="/" >
               Protect And Build your brand
             </Link>
-            <Link to="/about" >
+            <Link to="/" >
               Become an Affiliate
             </Link>
           </div>

@@ -30,12 +30,14 @@
     flex-direction: column;
     justify-content: center;
 }
-.logo-footer{
+.logo-footer-home{
     height: 35vh;
     position: relative;
-    bottom: 20vh;
+    bottom: 25vh;
+   
    
 }
+
 .footer-heading{
     font: 400 2vmax "Roboto";
     margin: 5vmax 0 2vmax 0;
@@ -71,4 +73,87 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media screen and (max-width:600px) {
+    .footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 30vh 15vh 20vh 30vh;
+        column-gap: 0;
+      
+    }
+    .logo-footer-home{
+     
+      position: static;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 8vmax;
+       
+       
+       
+    }
+    .logo-footer-home>img{
+        width: 35vmax;
+       
+       
+    }
+    .footer-section1{
+        height: 25vh;
+          color: white;
+          display: flex;
+       flex-direction: column;
+       width: 100vw;
+       justify-content: space-evenly;
+     
+      
+       
+       
+       justify-content: center;
+   }
+   .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 5vmax;
+}
+.footer-section{
+    height: 30vh;
+    width: 100vw;
+    padding: 2vmax 1vmax;
+    box-sizing: border-box;
+    color: white;
+   
+  
+    
+   
+   
+   
+}
+.footer-heading{
+    font: 400 2vmax "Roboto";
+    margin: 1vmax 0 0vmax 0;
+      color: white;
+      text-align: center;
+     
+      
+
+}
+.footer-navlinks{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+     
+    
+    
+}
+.bottom-footer{
+    border-top: 0.2px solid white;
+     height: 5vmax;
+     font: 300 1.2vmax "Roboto";
+   
+ }
+
+
+    
 }
