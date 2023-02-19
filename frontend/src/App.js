@@ -41,6 +41,7 @@ import MyOrder from "./component/Order/MyOrder.js";
 import Contact from "./component/Contact/Contact.js"
 import About from "./component/About/About.js"
 import NotFound from "./component/layout/NotFound/NotFound.js";
+import Navbar from "./component/layout/Header/Navbar.js";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -65,7 +66,8 @@ function App() {
 
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
+      <Navbar/>
 
       {isAuthenticated && user && <UserOptions user={user} />}
 
