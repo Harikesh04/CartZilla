@@ -61,7 +61,47 @@ const Products = () => {
         <Fragment>
           <MetaData title="PRODUCTS -- CartZilla" />
           <h2 className="productsHeading">Products</h2>
-          <div className="products">
+
+          <div className="filterBox-mobile">
+            <Typography>Price</Typography>
+            <Slider
+              value={price}
+              onChange={priceHandler}
+              valueLabelDisplay="auto"
+              area-labelledby="range-slider"
+              min={0}
+              max={200000}
+            />
+
+            <Typography>Categories</Typography>
+            <ul className="categoryBox">
+              {categories.map((category) => (
+                <li
+                  className="category-link"
+                  key={category}
+                  onClick={() => setCategory(category)}
+                >
+                  {category}
+                </li>
+              ))}
+            </ul>
+
+            <fieldset>
+              <Typography componenet="legend">Ratings Above</Typography>
+              <Slider
+                value={ratings}
+                valueLabelDisplay="auto"
+                onChange={(e, newRating) => {
+                  setRatings(newRating);
+                }}
+                aria-labelledby="continuous-slider"
+                min={0}
+                max={5}
+              />
+            </fieldset>
+          </div>
+
+          <div className="products-product">
             {products &&
               products.map((product) => (
                 <ProductCard key={product._id} product={product} />
