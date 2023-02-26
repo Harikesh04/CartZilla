@@ -4,7 +4,8 @@ import "./Navbar.css";
 import logo from "../../../images/navlogo.png";
 import { RiLoginCircleFill } from 'react-icons/ri';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { ImCross } from 'react-icons/im';
+
+import { GoX } from 'react-icons/go';
 
 const Navbar = () => {
 
@@ -90,7 +91,7 @@ const Navbar = () => {
         </div>
         <div id='mobile' className='hamburger' onClick={() => setClicked((prev) => !prev)}>
        
-            {clicked===false?<GiHamburgerMenu/>:<ImCross/>}
+            {clicked===false?<GiHamburgerMenu/>:<GoX/>}
           </div>
 
     </div>

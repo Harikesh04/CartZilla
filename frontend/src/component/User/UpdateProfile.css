@@ -5,9 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(231, 231, 231);
+    background-color: #fff100;
     position: fixed;
-    top: 0%;
+    
     left: 0;
   }
   
@@ -61,7 +61,7 @@
     position: absolute;
     transform: translateX(1vmax);
     font-size: 1.6vmax;
-    color: rgba(0, 0, 0, 0.623);
+    color: #ed1e79;
   }
   
   #updateProfileImage > img {
@@ -94,7 +94,7 @@
   
   .updateProfileBtn {
     border: none;
-    background-color: tomato;
+    background-color: #ed1e79;
     color: white;
     font: 300 0.9vmax "Roboto";
     width: 100%;
@@ -107,7 +107,7 @@
   }
   
   .updateProfileBtn:hover {
-    background-color: rgb(179, 66, 46);
+    background-color: #eb3c87
   }
   
   @media screen and (max-width: 600px) {

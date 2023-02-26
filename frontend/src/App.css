@@ -4,6 +4,7 @@
    
 }
 
+
 body {
   cursor: url("./images/cursor.png"), auto;
 }
@@ -17,6 +18,13 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
+  }
+  .pinkColor{
+    color: #ed1e79;
+  }
+  .yellowColor{
+    color: #fff100;
+
   }
 
   .greenColor {
