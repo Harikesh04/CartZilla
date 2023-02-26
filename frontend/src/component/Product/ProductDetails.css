@@ -101,7 +101,7 @@ display: flex;
     cursor: pointer;
     color: white;
     transition: all 0.5s;
-    background-color: tomato;
+    background-color: #ed1e79;
     font: 500 0.7vmax "Roboto";
     border-radius: 20px;
     padding: 0.5vmax 2vmax;
@@ -110,7 +110,7 @@ display: flex;
   }
   
   .detailsBlock-3-1 > button:last-child:hover {
-    background-color: rgb(214, 84, 61);
+    background-color: #e44087;
   }
   
   .detailsBlock-3 > p {
@@ -134,7 +134,7 @@ display: flex;
   
   .submitReview {
     border: none;
-    background-color: tomato;
+    background-color: #ed1e79;
     font: 500 0.7vmax "Roboto";
     border-radius: 20px;
     padding: 0.6vmax 2vmax;
@@ -145,7 +145,7 @@ display: flex;
     outline: none;
   }
   .submitReview:hover {
-    background-color: rgb(197, 68, 45);
+    background-color: #ec488f;
     transform: scale(1.1);
   }
 

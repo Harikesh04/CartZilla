@@ -5,9 +5,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(225, 238, 234);
+    background-color: #fff100;
     position: fixed;
-    top: 0%;
+    text-transform: uppercase;
+   
     left: 0;
 }
 
@@ -22,16 +23,18 @@
     border-radius: 0%;
     font: 300 1.1vmax cursive;
     box-sizing: border-box;
+    text-transform: uppercase;
     height: 8%;
   }
   
   .searchBox > input[type="submit"] {
     height: 8%;
     border-radius: 0%;
-    background-color: tomato;
+    background-color: #ed1e79;
     border: none;
     padding: 1vmax;
     width: 10%;
+    text-transform: uppercase;
     font: 300 1.1vmax "Roboto";
     cursor: pointer;
     color: white;
