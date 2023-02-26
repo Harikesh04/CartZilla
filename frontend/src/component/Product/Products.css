@@ -1,5 +1,5 @@
 .productsHeading {
-    margin: 2vmax auto;
+    margin: 0 auto 2vmax 0 ;
     width: 15vw;
     border-bottom: 1px solid rgba(0, 0, 0, 0.171);
     padding: 2vmax;
@@ -60,7 +60,7 @@
   color: rgb(0, 0, 0);
 }
 .pageItemActive {
-  background-color: tomato;
+  background-color: #ed1e79;
 }
 .pageLinkActive {
   color: white;
@@ -90,7 +90,7 @@
   transition: all 0.5s;
 }
 .category-link:hover{
-  color: tomato;
+  color: #ed1e79;
 }
 .filterBox-mobile{display: none;}
 

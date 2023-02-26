@@ -3,10 +3,10 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
-    top: 0%;
+    
     left: 0%;
   max-width: 100%;
-  background-color: white;
+  background-color: #fff100 ;
 }
 
 .profileContainer>div{
@@ -19,7 +19,7 @@
   align-items: center;
 }
 .profileContainer > div:first-child > h1 {
-    color: rgba(0, 0, 0, 0.445);
+    color:#ed1e79;
     font: 500 2.2vmax "Roboto";
     transform: translateY(-2vmax);
   }
@@ -35,7 +35,7 @@
   }
   .profileContainer > div:first-child > a {
     border: none;
-    background-color: tomato;
+    background-color: #ed1e79;
     font: 400 1vmax "Roboto";
     color: white;
     text-decoration: none;
@@ -46,7 +46,7 @@
     transition: all 0.5s;
   }
   .profileContainer > div:first-child > a:hover {
-    background-color: rgb(204, 78, 56);
+    background-color: #f33e8c;
   }
   .profileContainer > div:last-child {
     justify-content: space-evenly;
@@ -55,11 +55,11 @@
     box-sizing: border-box;
   }
   .profileContainer > div:last-child > div > h4 {
-    color: black;
+    color: #ed1e79;
     font: 400 1.2vmax "Roboto";
   }
   .profileContainer > div:last-child > div > p {
-    color: rgba(0, 0, 0, 0.418);
+    color: #14040b;
     font: 400 1vmax cursive;
     margin: 0.2vmax;
   }
@@ -70,7 +70,7 @@
   }
   .profileContainer > div:last-child > div:last-child > a {
     border: none;
-    background-color: rgb(68, 68, 68);
+    background-color: #ed1e79;
     font: 400 1vmax "Roboto";
     color: white;
     text-decoration: none;
@@ -81,7 +81,7 @@
   }
 
   .profileContainer > div:last-child > div:last-child > a:hover {
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(238, 58, 136)
   }
   
   @media screen and (max-width: 600px) {

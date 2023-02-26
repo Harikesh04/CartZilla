@@ -7,7 +7,7 @@
     background-color: rgb(6, 14, 74);
     position: fixed;
     position: fixed;
-    top: 0%;
+   
     left: 0;
     box-sizing: border-box;
    
@@ -41,13 +41,14 @@
 }
 .contactUsform>button{
     border: none;
-      background-color: tomato;
+      background-color: #ed1e79;
       color: white;
-      padding: 0.5vmax;
+      padding: 1vmax;
       margin: 1vmax auto;
       
      
-      font: 300 0.9vmax "Roboto";
+      font: 300 1.1vmax "Roboto";
+      text-transform: uppercase;
   width: 30%;
 
     cursor: pointer;
