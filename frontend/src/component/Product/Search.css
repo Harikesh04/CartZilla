@@ -5,9 +5,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff100;
+    background-color: white;
     position: fixed;
     text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
    
     left: 0;
 }
@@ -39,6 +41,7 @@
     cursor: pointer;
     color: white;
     transition: all 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   
   .searchBox > input[type="submit"]:hover {

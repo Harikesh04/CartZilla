@@ -43,15 +43,18 @@ import About from "./component/About/About.js"
 import NotFound from "./component/layout/NotFound/NotFound.js";
 import Navbar from "./component/layout/Header/Navbar.js";
 
+
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const [stripeApiKey, setStripeApiKey] = useState("");
 
   async function getStripeApiKey() {
-    const { data } = await axios.get("/api/v1/stripeapikey");
-
+    const { data } = await axios.get(`/api/v1/stripeapikey`);
+     
+    
     setStripeApiKey(data.stripeApiKey);
   }
+  
 
   useEffect(() => {
     WebFont.load({
@@ -62,6 +65,8 @@ function App() {
     store.dispatch(loadUser());
 
     getStripeApiKey();
+    console.log("..");
+  console.log(stripeApiKey);
   }, []);
 
   return (
@@ -85,7 +90,7 @@ function App() {
           <Route path="/account" element={<Profile />} />
           <Route path="/me/update" element={<UpdateProfile />} />
           <Route path="/password/update" element={<UpdatePassword />} />
-          <Route path="/login/shipping" element={<Shipping />} />
+          <Route path="/shipping" element={<Shipping />} />
 
          
           <Route exact path="/success" element={<OrderSuccess />} />

@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import fileUpload from "express-fileupload"; 
 import dotenv from "dotenv";
+import cors from "cors";
 
 import path from "path";
 import { fileURLToPath } from "url";
@@ -25,6 +26,7 @@ app.use(express.json());//this is use to convert the json data in javascript obj
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true })); // 
 app.use(fileUpload());
+app.use(cors());
 
 
 //config

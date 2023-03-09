@@ -38,8 +38,10 @@ const About = () => {
           </div>
           <div className="aboutSectionContainer2">
             <h2>
-            Hii, I am Harikesh Singh a 3rd year IT undergrad at MITS Gwalior. I am a full-stack web developer and Competitive Programmer. Fond of making websites and working on various tech stack. 
+            I am currently a third-year IT undergraduate student at MITSG. My areas of expertise include full-stack web development and competitive programming. I have solved over 700+ coding problems on various platforms and have gained over six months of experience as a Software Developer Engineer intern. My proficiency in web development includes hands-on practice with ReactJS, Redux, NodeJS, ExpressJS, Spring Boot, Java, AWS, CSS, JavaScript, Tailwind CSS, Git, and GitHub, Jira.
             </h2>
+            
+            
            
 
             

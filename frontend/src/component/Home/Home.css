@@ -10,14 +10,20 @@
     width: 100vw;
     height: 100vh;
     justify-content: space-evenly;
-    background-color:  #fff100;
+    background-color:  white;
 }
 
 .hero-img>img{
    
     width: 85%;
+    cursor: pointer;
     
     
+}
+
+.hero-img:hover{
+   
+   
 }
 
 .hero-left{
@@ -60,6 +66,7 @@
      position: relative;
      border: 2px solid #ed1e79;
      overflow: hidden;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
     
 }
@@ -68,11 +75,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color:#fff100;
+    background-color:white;
     width: 100%;
     height: 100%;
     transition: all linear 0.5s;
     transform: translateX(-100%);
+   
    
    
     z-index: 1;
@@ -86,7 +94,7 @@
 }
 .hero-left>button>a{
     text-decoration: none;
-    color:#fff100;
+    color:white;
     padding: 2vmax 1vmax;
 }
 .hero-left>button>a:hover{
@@ -205,6 +213,7 @@
     margin:2vmax;
     transition: all 0.5s;
     padding-bottom: 0.5vmax;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 
 .productCard>img{
