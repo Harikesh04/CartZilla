@@ -29,7 +29,7 @@
     "nodemon": "^2.0.15",
     "react-elastic-carousel": "^0.11.5",
     "stripe": "^9.9.0",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.9",
     "validator": "^13.7.0"
   }
 }
