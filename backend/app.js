@@ -26,7 +26,13 @@ app.use(express.json());//this is use to convert the json data in javascript obj
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true })); // 
 app.use(fileUpload());
-app.use(cors());
+app.use(
+  cors({
+    origin: [`http://localhost:3008`],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 
 //config
