@@ -31,7 +31,6 @@ app.use(
     // origin: [process.env.FRONTEND_URL],
     origin: ["https://cartzilla-mauve.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ['my-custom-header'],
     credentials: true,
   })
 );
