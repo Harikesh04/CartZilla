@@ -28,10 +28,9 @@ app.use(bodyParser.urlencoded({ extended: true })); //
 app.use(fileUpload());
 app.use(
   cors({
-    'origin': '*',
-    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    'credentials': true,
-    
+    origin: '*',
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 
