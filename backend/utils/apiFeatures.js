@@ -19,7 +19,7 @@ class ApiFeatures {
           },
         }//agar nii mila toh                                  
       : {};
-
+        // since this.query is Product.find({...keyword})
     this.query = this.query.find({ ...keyword });//using spread operator
     // here we have send that keyword which we have made using regex
     return this;

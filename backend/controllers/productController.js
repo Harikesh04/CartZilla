@@ -9,6 +9,11 @@ export const getAllproducts = catchAsynError(async (req, res) => {
   const resultPerPage = 8;
   const productsCount = await Product.countDocuments();
   //creating object for the class apifeatures && calling its methods
+
+  //here instead of doing these many things we can simply call
+
+  // Product.find({name:req.query.keyword});//but this will only find "keyword " not "keywordString" or not "StringkeywordString"
+  
   const ApiFeature = new ApiFeatures(Product.find(), req.query)
   // req.query jo bhi ? k baad ho .eg- api/v1/localhost:3000?keyword=mobile...
     .search()
@@ -75,7 +80,6 @@ export const createProduct = catchAsynError(async (req, res, next) => {
     product,
   });
 });
-
 //update the product--Admin
 export const updateProduct = catchAsynError(async (req, res, next) => {
   let product = await Product.findById(req.params.id); //fetching id from url

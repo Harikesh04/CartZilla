@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true })); //
 app.use(fileUpload());
 app.use(
   cors({
-    origin: ['https://cartzilla-mauve.vercel.app','http://localhost:3007'],
+    origin: '*',
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

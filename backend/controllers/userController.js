@@ -63,7 +63,9 @@ export const logOut = catchAsynError(async (req, res, next) => {
     httpOnly: true,
     sameSite: process.env.NODE_ENV === "PRODUCTION" ? "none" : "lax",
     secure: process.env.NODE_ENV === "PRODUCTION" ? true : false,
-  });
+  }
+  
+  );
   res.status(200).json({
     success: true,
     message: "Logged Out",
